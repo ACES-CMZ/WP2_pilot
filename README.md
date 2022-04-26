@@ -19,4 +19,5 @@ Workflow
 8. Note any problematic spectra as you go along (if there are any)
 9. Once completed commit your changes (remember to tag the issue in the commit
    remarks using e.g. #1) and push to branch using ``git push origin s1.XX.scousepy``
-10. Create a pull request to ``main``
+10. Create a pull request to ``main``, again tagging the issue number in the
+    comments.
