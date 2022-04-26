@@ -7,3 +7,5 @@ Workflow
 --------
 
 1. Clone github repo using ``git clone https://github.com/ACES-CMZ/WP2_pilot.git``
+2. Download relevant data from globus including ``HC3N_TP_7m_12m_feather.fits``
+   and ``HC3N_TP_7m_12m_feather.mask2d.fits``
