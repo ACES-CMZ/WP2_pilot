@@ -14,4 +14,4 @@ s2file='s2.18.scousepy' # You will need to update these accordingly!!
 # Once completed upload the decomposed stage 2 data to github and globus
 config_file=scouse.run_setup(filename, datadir, outputdir=outputdir)
 s = scouse.stage_1(config=config_file, interactive=False, s1file=s1file )
-s = scouse.stage_2(config=config_file, refit=False, s1file=s1file, s2file=s2file)
+s = scouse.stage_2(config=config_file, refit=True, s1file=s1file, s2file=s2file)
