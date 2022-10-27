@@ -5,8 +5,8 @@ datadir='./'
 outputdir='./'
 filename='HC3N_TP_7m_12m_feather' # note we remove the fits extension
 
-s1file='s1.17.scousepy' # You will need to update these accordingly!!
-s2file='s2.17.scousepy' # You will need to update these accordingly!!
+s1file='s1.9.scousepy' # You will need to update these accordingly!!
+s2file='s2.9.scousepy' # You will need to update these accordingly!!
 
 # Run first two stages - stage 1 should simply load up the scouse file
 # stage 2 will open the fitter.
