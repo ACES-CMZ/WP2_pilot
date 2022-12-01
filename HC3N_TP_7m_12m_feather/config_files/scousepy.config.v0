@@ -37,4 +37,4 @@ write_ascii = True
 [stage_3]
 
 # Tolerance values for the fitting. See Henshaw et al. 2016a
-tol = [2.0,3.0,1.0,2.5,2.5,0.5]
+tol = [3.0,3.0,1.0,2.5,2.5,0.5]
