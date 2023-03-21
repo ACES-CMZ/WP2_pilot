@@ -14,8 +14,9 @@ import glob
 import os
 
 # Get paths to needed files and file basenames
-cwd = os.getcwd()
-dat_dir    = cwd + '../HC3N_TP_7m_12m_feather/stage_4/'
+path = os.getcwd()
+parent = os.path.dirname(path)
+dat_dir    = parent + '/HC3N_TP_7m_12m_feather/stage_4/'
 dat_files  = glob.glob(dat_dir + '*_mask.dat')
 mask_files = [dat_dir + 'v0_mask.fits',dat_dir+'v1_mask.fits',dat_dir+'v2_mask.fits']
 dat_names  = [os.path.basename(x) for x in glob.glob(dat_dir+'*_mask.dat')]
