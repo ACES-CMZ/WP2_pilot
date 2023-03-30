@@ -26,5 +26,5 @@ Sgr_head = Sgr_im[0].header
 pb_im_new, footprint = reproject_interp(pb_im,Sgr_head)
 
 # Write out the new primary beam image with the appropriate pixel / WCS scaling
-fits.writeto('SgrB2_PrimaryBeam_new.fits',data=pb_im_new,header=Sgr_head)
+fits.writeto('Sgr_PrimaryBeam_new.fits',data=pb_im_new,header=Sgr_head)
 
