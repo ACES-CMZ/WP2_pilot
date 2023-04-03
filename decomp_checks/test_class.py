@@ -11,4 +11,6 @@ import mask_class
 test = mask_class.MaskClass()
 print(test.params)
 
-mask_names = test.make_mask()
+v0_mnames, v1_mnames, v2_mnames = test.make_mask()
+
+test.super_mask(v0_mnames, v1_mnames, v2_mnames)
