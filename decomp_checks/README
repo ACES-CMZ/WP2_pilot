@@ -1,0 +1,24 @@
+class MaskClass
+
+This class creates masks for each individual parameter for each scousepy decomposition. It then creates super masks that are the combinations of the parameter-specific masks
+
+The class assumes the following directory structure: 
+
+the MaskClass script (mask_class.py) is located in a sub-directory of the directory pulled from github. The path to the directory containing the stage_4 data files from the directory containing the class is then: '../HC3N_TP_7m_12m_feather/stage_4/'
+
+The class outputs the masks to the directory 'mask_dir/'
+
+The class can be run using the test_class.py script. When prompted, enter True for AIC and PB and if all files are in the expected directories a mask should be created for AIC and PB as well as a super mask combining the two parameter-specific masks.
+
+Below is a description of the functions within the class:
+
+FUNCTIONS:
+
+__init__(): Initialized the MaskClass instance. As part of the initialization, a dictionary of key-value pairs is initialized which is used to determine which parameters to use for the mask generation. The possible mask options are based on the scousepy output parameters (AIC, rms, chisq, etc) plus the primary beam response (PB). By default, all of the key value pairs are false (e.g. {'AIC' : False}), but as part of the initialization the user will be prompted whether they wish to mask any of the parameters. If the user types True for any of the parameters, the corresponding dictionary entry will be updated to True, and that parameter will be used to make a mask.
+
+make_mask(): For each scousepy decomposition generate a mask for each desired parameter. These parameter-specific masks are saved in the mask_dir/ folder. Thresholds used to create the masks are initialized using the __init_() function.
+
+super_mask(v0_mlist,v1_mlist,v2_mlist): For each decomposition, create a super mask incorporating all of the parameter-specific masks generated from the make_mask() function. 
+
+TBD:
+Add a function which applies the masks to the stage 4 .dat files. This function will then save the new .dat files after masking to the data directory (HC3N_TP_7m_12m_feather/stage_4/). 
