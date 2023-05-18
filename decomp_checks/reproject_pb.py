@@ -18,13 +18,13 @@ import os
 path     = os.getcwd()
 parent   = os.path.dirname(path)
 pb_name  = parent + '/SgrB2_PrimaryBeam.fits'
-Sgr_name = parent + '/SgrB2_mask2d_new.fits'
+WCS_name = parent + '/HC3N_TP_7m_12m_feather/stage_4/stage_4_AIC.fits' # Any image from stage 4 to get WCS
 pb_im    = fits.open(pb_name)
-Sgr_im   = fits.open(Sgr_name)
-Sgr_head = Sgr_im[0].header
+WCS_im   = fits.open(WCS_name)
+WCS_head = WCS_im[0].header
 
-pb_im_new, footprint = reproject_interp(pb_im,Sgr_head)
+pb_im_new, footprint = reproject_interp(pb_im,WCS_head)
 
 # Write out the new primary beam image with the appropriate pixel / WCS scaling
-fits.writeto('Sgr_PrimaryBeam_new.fits',data=pb_im_new,header=Sgr_head)
+fits.writeto('Sgr_PrimaryBeam_new.fits',data=pb_im_new,header=WCS_head)
 

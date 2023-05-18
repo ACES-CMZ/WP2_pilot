@@ -8,10 +8,6 @@ the MaskClass script (mask_class.py) is located in a sub-directory of the direct
 
 The class outputs the masks to the directory 'mask_dir/'
 
-You'll also need the primary beam file for the SgrB2 observations. Adam has uploaded this file to globus in the pilot directory (same area where the HC3N FITS file is obtained). This PB should be moved to the HC3N_TP_7m_12m_feather/stage_4/ directory.
-
-NOTE: the PB on globus will need to be reprojected to the gridding used by the pilot data. This can be done using the reproject script that is within the archive directory on github.
-
 The class can be run using the test_class.py script. When prompted, enter True for AIC and PB and if all files are in the expected directories a mask should be created for AIC and PB as well as a super mask combining the two parameter-specific masks.
 
 Below is a description of the functions within the class:
