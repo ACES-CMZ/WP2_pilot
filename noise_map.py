@@ -8,7 +8,7 @@ import numpy as np
 datadir='./'
 cube=datadir+'HC3N_TP_7m_12m_feather.fits'
 
-output_noise='HC3N_TP_7m_12m_feather.noise.fits'
+output_noise='HC3N_TP_7m_12m_feather.noise.new.fits'
 
 # run noise routine
 noise=scNoiseRoutines.recipe_phangs_noise(cube,outfile=output_noise,overwrite=True,)
