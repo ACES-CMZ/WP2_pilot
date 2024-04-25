@@ -1,0 +1,40 @@
+[DEFAULT]
+
+# location of the FITS data cube you would like to decompose
+datadirectory = './'
+
+# name of the FITS data cube (without extension)
+filename = 'HC3N_TP_7m_12m_feather'
+
+# output directory for data products
+outputdirectory = './'
+
+# decomposition model (default=Gaussian)
+fittype = 'gaussian'
+
+# Number of CPUs used for parallel processing
+njobs = 25
+
+# print messages to the terminal [True/False]
+verbose = True
+
+# autosave output from individual steps [True/False]
+autosave = True
+
+[stage_1]
+
+# save moment maps as FITS files [True/False]
+write_moments = True
+
+# generate a figure of the coverage map [True/False]
+save_fig = True
+
+[stage_2]
+
+# outputs an ascii table of the fits [True/False]
+write_ascii = True
+
+[stage_3]
+
+# Tolerance values for the fitting. See Henshaw et al. 2016a
+tol = [4.0,3.0,0.5,5.0,5.0,0.5]

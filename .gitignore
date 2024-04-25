@@ -53,3 +53,9 @@ dkms.conf
 
 # others
 *.fits
+*.tar.gz
+*.ipynb
+*.ipynb_checkpoints
+
+stage_3/
+stage_4/
