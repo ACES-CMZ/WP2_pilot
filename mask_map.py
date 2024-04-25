@@ -9,10 +9,10 @@ from spectral_cube import SpectralCube
 
 datadir='./'
 cube=datadir+'HC3N_TP_7m_12m_feather.fits'
-noise_cube='HC3N_TP_7m_12m_feather.noise.fits'
+noise_cube='HC3N_TP_7m_12m_feather.noise.new.fits'
 
-output_mask3d='HC3N_TP_7m_12m_feather.mask3d.fits'
-output_mask2d='HC3N_TP_7m_12m_feather.mask2d.fits'
+output_mask3d='HC3N_TP_7m_12m_feather.mask3d.new.fits'
+output_mask2d='HC3N_TP_7m_12m_feather.mask2d.new.fits'
 
 # spcube=SpectralCube.read(cube)
 spcuben=SpectralCube.read(noise_cube)
